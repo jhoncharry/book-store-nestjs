@@ -1,7 +1,6 @@
 import { Injectable, BadRequestException, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { RoleRepository } from './role.repository';
-import { MapperService } from '../../shared/mapper.service';
 import { Role } from './role.entity';
 
 @Injectable()
