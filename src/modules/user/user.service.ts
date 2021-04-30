@@ -24,7 +24,6 @@ export class UserService {
 
     async getAll(): Promise<UserDto[]> {
         const users: User[] = await this._userRepository.find({ where: { status: 'ACTIVE' } });
-        console.log(this._mapperService.mapCollection<User, UserDto>(users, new UserDto));
         return this._mapperService.mapCollection<User, UserDto>(users, new UserDto);
     }
 
